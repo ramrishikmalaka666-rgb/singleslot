@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Single Slot — Maths, Physics, Chemistry and JEE Main preparation.">
+  <title>Single Slot | JEE Formula Studio</title>
+  <link rel="icon" type="image/png" href="assets/single-slot-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>window.MathJax={tex:{inlineMath:[["\\(","\\)" ]],displayMath:[["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Single Slot home"><img class="brand-logo" src="assets/single-slot-logo.png" alt="Original Single Slot logo"><span>SINGLE <b>SLOT</b><small>JEE FORMULA STUDIO</small></span></a>
+    <div class="top-actions"><span id="connection-status" class="status-pill connected"><i></i> Ready to learn</span></div>
+  </header>
+
+  <main>
+    <section id="get-started-screen" class="get-started-screen" aria-labelledby="start-title">
+      <div class="start-glow start-glow-one"></div><div class="start-glow start-glow-two"></div>
+      <div class="start-content">
+        <div class="start-logo-wrap"><img src="assets/single-slot-logo.png" alt="Single Slot logo" class="start-logo"></div>
+        <span class="eyebrow start-eyebrow">YOUR PERSONAL STUDY WORKSPACE</span>
+        <h1 id="start-title">Study smarter.<br><span>One slot at a time.</span></h1>
+        <p class="start-description">A focused place to understand concepts, revise formulas, organize study materials, and build a consistent JEE preparation routine.</p>
+        <div class="start-feature-grid">
+          <article class="start-feature"><span class="start-feature-icon">∑</span><div><b>Formula Library</b><small>Search concepts and chapter-wise formulas.</small></div></article>
+          <article class="start-feature"><span class="start-feature-icon">✦</span><div><b>JARVIS Doubt Solver</b><small>Ask questions and work through explanations.</small></div></article>
+          <article class="start-feature"><span class="start-feature-icon">▤</span><div><b>Study Materials</b><small>Keep your subject resources organized.</small></div></article>
+          <article class="start-feature"><span class="start-feature-icon">▦</span><div><b>Timetable & Progress</b><small>Plan sessions and track daily progress.</small></div></article>
+        </div>
+        <button id="get-started-button" class="btn btn-primary get-started-button">Get Started <span aria-hidden="true">→</span></button>
+        <p class="start-footnote">Made for focused learning · Maths · Physics · Chemistry · Biology</p>
+      </div>
+      <div class="start-side-art" aria-hidden="true"><div class="start-orbit orbit-outer"></div><div class="start-orbit orbit-inner"></div><div class="start-atom">⚛</div><div class="floating-formula formula-one">f(x) = ∑ xⁿ</div><div class="floating-formula formula-two">E = mc²</div><div class="floating-formula formula-three">H₂O</div><div class="start-art-caption"><span class="pulse-dot"></span> YOUR NEXT SESSION STARTS HERE</div></div>
+    </section>
+    <section id="app-screen" class="app-layout hidden">
+      <aside class="sidebar">
+        <div class="side-label">WORKSPACE</div>
+        <button class="side-link active" data-view="overview"><span>⌂</span> Overview</button>
+        <button class="side-link" data-view="formulas"><span>∑</span> Formula library</button>
+        <button class="side-link" data-view="materials"><span>▤</span> Materials</button>
+        <button class="side-link" data-view="jarvis"><span>✦</span> JARVIS Doubt Solver</button>
+        <button class="side-link" data-view="progress"><span>↗</span> Progress tracker</button>
+        <button class="side-link" data-view="timetable"><span>▦</span> Timetable maker</button>
+        <div class="sidebar-bottom"><div class="avatar" id="side-avatar">S</div><div class="profile-label"><b id="side-name">Student</b><small>Ready to learn</small></div></div>
+      </aside>
+      <section class="workspace">
+        <div class="welcome-row"><div><span class="eyebrow">JEE MAIN FORMULA STUDIO</span><h1 id="welcome-title">Welcome back.</h1><p>Small steps every day add up to big results.</p></div><div class="date-chip" id="today-label"></div></div>
+        <div id="view-overview" class="view-panel">
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-icon orange">◷</div><span>Study sessions</span><strong id="stat-sessions">0</strong><small>Sessions recorded on this account</small></article>
+            <article class="stat-card"><div class="stat-icon violet">✓</div><span>Tasks completed</span><strong id="stat-tasks">0</strong><small>Keep the streak going</small></article>
+            <article class="stat-card"><div class="stat-icon green">∑</div><span>Formula bookmarks</span><strong id="stat-bookmarks">0</strong><small>Saved for quick revision</small></article>
+          </div>
+          <div class="content-grid">
+            <article class="panel"><div class="panel-heading"><div><h3>Continue learning</h3><p>Choose a subject to get started.</p></div><span class="panel-symbol">✦</span></div>
+              <p>Open the Formula Library to explore your study topics.</p><button class="btn btn-primary" data-view="formulas">Open Formula Library →</button></article>
+            <article class="panel today-panel"><div class="panel-heading"><div><h3>Today's focus</h3><p>A little progress is still progress.</p></div></div>
+              <label class="check-row"><input type="checkbox" data-task="maths"><span><b>Revise one Maths concept</b><small>Concept clarity</small></span></label>
+              <label class="check-row"><input type="checkbox" data-task="physics"><span><b>Solve Physics numericals</b><small>Practice</small></span></label>
+              <label class="check-row"><input type="checkbox" data-task="chemistry"><span><b>Review Chemistry reactions</b><small>Quick revision</small></span></label>
+              <button id="save-tasks" class="btn btn-outline btn-full">Save today's progress</button>
+              <p id="task-message" class="small-message"></p>
+            </article>
+          </div>
+          <article class="panel jee-panel"><div class="jee-copy"><span class="eyebrow">JEE MAIN PREPARATION</span><h2>Make your next attempt<br><span>your strongest one.</span></h2><p>Organize concepts, revise formulas and build a consistent practice habit.</p><button class="btn btn-primary" data-view="formulas">Explore formulas →</button></div><div class="jee-art"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="atom-art">⚛</div><span class="math-art">f(x) = ∑ xⁿ</span><span class="chem-art">H₂O · NaCl</span></div></article>
+        </div>
+        <div id="view-formulas" class="view-panel hidden">
+          <article class="panel formula-hero"><div><span class="eyebrow">CHAPTER-WISE · SEARCHABLE · JEE MAIN</span><h2>Formula handbook</h2><p>Formula names, equations and key conditions organized by chapter. Search by formula, topic or equation.</p></div><div class="formula-hero-mark">∑</div></article>
+          <article class="panel"><div class="formula-toolbar"><div id="formula-filters" class="formula-filters"><button class="filter-chip active" data-formula-subject="All">All subjects</button><button class="filter-chip" data-formula-subject="Maths">Mathematics</button><button class="filter-chip" data-formula-subject="Physics">Physics</button><button class="filter-chip" data-formula-subject="Chemistry">Chemistry</button></div><input id="formula-search" class="search-input" placeholder="Search formula name or chapter…" aria-label="Search formulas"></div><div class="formula-count" id="formula-count"></div><div id="formula-list" class="formula-chapters"></div></article>
+        </div>
+
+
+        <div id="view-materials" class="view-panel hidden">
+          <article class="panel materials-hero"><span class="eyebrow">YOUR STUDY FILES</span><h2>Materials</h2><p>Choose a subject. This space is ready for your notes and files.</p></article>
+          <div class="materials-grid">
+            <button class="material-card" data-material="Maths"><span>∑</span><b>Maths</b><small>Empty — ready for upload</small></button>
+            <button class="material-card" data-material="Physics"><span>⚡</span><b>Physics</b><small>Empty — ready for upload</small></button>
+            <button class="material-card" data-material="Chemistry"><span>⚗</span><b>Chemistry</b><small>Empty — ready for upload</small></button>
+            <button class="material-card" data-material="Biology"><span>♧</span><b>Biology</b><small>Empty — ready for upload</small></button>
+            <button class="material-card" data-material="Botany"><span>🌿</span><b>Botany</b><small>Empty — ready for upload</small></button>
+            <button class="material-card" data-material="Zoology"><span>♧</span><b>Zoology</b><small>Empty — ready for upload</small></button>
+          </div>
+          <article class="panel materials-detail" id="materials-detail"><h3>Select a subject</h3><p>Your materials will appear here after you upload them.</p></article>
+        </div>
+        <div id="view-jarvis" class="view-panel hidden"><article class="panel jarvis-hero"><span class="jarvis-orb">✦</span><div><span class="eyebrow">UNIVERSAL AI DOUBT SOLVER</span><h2>JARVIS</h2><p>Ask anything. JARVIS uses the OpenAI API to help explain concepts, solve problems, and answer questions.</p></div></article><article class="panel jarvis-panel"><div class="jarvis-note">JARVIS connects to OpenAI securely through a server-side function. Add your OpenAI API key as the <b>OPENAI_API_KEY</b> environment variable in your hosting dashboard. Never paste a secret key into public website code.</div><label for="jarvis-subject">Subject (optional)</label><select id="jarvis-subject"><option>Any subject</option><option>Maths</option><option>Physics</option><option>Chemistry</option><option>Biology</option><option>Botany</option><option>Zoology</option><option>Computer Science</option><option>General knowledge</option><option>Other</option></select><label for="jarvis-question">Ask anything</label><textarea id="jarvis-question" rows="4" placeholder="Type any doubt: explain a concept, solve a problem, write code, or ask a general question…"></textarea><button id="jarvis-ask" class="btn btn-primary">✦ Ask JARVIS</button><div id="jarvis-answer" class="jarvis-answer" aria-live="polite"><p>Ask a question to begin. For live AI answers, the site owner must configure the secure OpenAI API key on the server.</p></div></article></div>
+        <div id="view-progress" class="view-panel hidden"><article class="panel"><div class="panel-heading"><div><h3>Your progress</h3><p>Your personal learning activity.</p></div></div><div class="progress-summary"><div class="progress-ring"><span id="progress-percent">0%</span></div><div><h3>Consistency over perfection.</h3><p id="progress-copy">Complete today's focus tasks and record study sessions to build your progress.</p><button id="record-session" class="btn btn-primary">＋ Record study session</button></div></div><div class="activity-chart" id="activity-chart"></div></article></div>
+        <div id="view-timetable" class="view-panel hidden">
+          <article class="panel timetable-hero"><div><span class="eyebrow">YOUR WEEK, YOUR WAY</span><h2>Study timetable maker</h2><p>Build a balanced weekly routine for college, revision, practice and breaks.</p></div><span class="timetable-emoji">🗓️</span></article>
+          <article class="panel"><div class="panel-heading"><div><h3>Create a study slot</h3><p>Add a task and it will appear in your weekly timetable.</p></div></div>
+            <form id="slot-form" class="slot-form"><label>Day<select id="slot-day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></label><label>Start time<input id="slot-start" type="time" value="17:00" required></label><label>End time<input id="slot-end" type="time" value="18:00" required></label><label>Subject<select id="slot-subject"><option>Maths</option><option>Physics</option><option>Chemistry</option><option>JEE Practice</option><option>Revision</option><option>Break</option><option>College</option><option>Other</option></select></label><label class="slot-task">Task / chapter<input id="slot-task" placeholder="e.g. Sets and Relations" maxlength="100" required></label><button class="btn btn-primary slot-add" type="submit">＋ Add to timetable</button></form>
+            <div class="timetable-actions"><button id="sample-timetable" class="btn btn-outline">✨ Add sample plan</button><button id="clear-timetable" class="btn btn-ghost">Clear timetable</button><button id="download-timetable" class="btn btn-primary">↓ Download timetable (.CSV)</button><button id="download-ics" class="btn btn-outline">＋ Add to calendar (.ICS)</button><button id="print-timetable" class="btn btn-outline">↗ Print / Save PDF</button></div>
+          </article>
+          <article class="panel"><div class="panel-heading"><div><h3>My weekly plan</h3><p>Saved on this device automatically.</p></div><span id="slot-count" class="count-pill">0 slots</span></div><div id="timetable-grid" class="timetable-grid"></div></article>
+        </div>
+        <footer class="app-footer">SINGLE SLOT <span>·</span> Learn at your pace.</footer>
+      </section>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="formula-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
